@@ -44,21 +44,21 @@ else :
 """
 
 import random
-computer_guess = random.randint(4, 10)
+
+computer_guess = random.randint(4, 9)
 user_guess = 0
 generated_list_range = list(range(computer_guess - 3, computer_guess + 3))
 user_guess = int(input(f"Guess the correct number the copmuter chose? {generated_list_range}"))
 live = 3
-while live > 0 : 
+
+while live > 1 : 
    
-    random.shuffle(generated_list_range)
+        random.shuffle(generated_list_range)
    
-    if user_guess == computer_guess :
-        print("Hurray you won your guess is {user_guess} the computer is {computer_guess}")
-        break
-    else :
-         live -= 1
-         print("Your guess is wrong!")
-         user_guess = int(input(f"Guess the correct number the copmuter chose? {generated_list_range}"))
+        if user_guess == computer_guess :
+            print("Hurray you won your guess is {user_guess} the computer is {computer_guess}")
+        else :
+            live -= 1
+        print("Your guess is wrong!")
 else :
     print(F"""You have exhausted the lives left, the computer guess is {computer_guess} loser!""")

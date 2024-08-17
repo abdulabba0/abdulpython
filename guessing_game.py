@@ -49,16 +49,19 @@ computer_guess = random.randint(4, 9)
 user_guess = 0
 generated_list_range = list(range(computer_guess - 3, computer_guess + 3))
 user_guess = int(input(f"Guess the correct number the copmuter chose? {generated_list_range}"))
-live = 3
+lives = 2
 
-while live > 1 : 
+while lives > 0 : 
    
         random.shuffle(generated_list_range)
    
         if user_guess == computer_guess :
             print("Hurray you won your guess is {user_guess} the computer is {computer_guess}")
+            
         else :
-            live -= 1
+            lives -= 1
         print("Your guess is wrong!")
-else :
-    print(F"""You have exhausted the lives left, the computer guess is {computer_guess} loser!""")
+        user_guess = int(input(f"Guess the correct number the copmuter chose? {generated_list_range}"))
+        if lives == 0:
+            print(F"""You have exhausted the lives left, the computer guess is {computer_guess} loser!""")
+            break

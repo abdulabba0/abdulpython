@@ -12,15 +12,14 @@ def guessing_game():
         while lives > 1:
             
             print("Guess a number from this list:", generated_list_range)
-            # user_guess = int(input(f"You have {lives} lives left. Take a guess: "))
 
             if user_guess == computer_guess:
                 print("Congratulations! You've guessed the correct number!")
                 break
             else:
                 print("Wrong guess.")
-                lives -= 1
                 user_guess = int(input(f"Guess the correct number the copmuter chose? {generated_list_range}"))
+                lives -= 1
         if lives == 1:
             print(f"Sorry, you've run out of lives. The number was {computer_guess}.")
 

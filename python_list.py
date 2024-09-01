@@ -145,8 +145,8 @@ students = ["abdul", "frank", "John", "kemi", "musa"]
 #     x += 1
 
 # list comprehension
-fruits = ["mango", "pear", "pinepapple", "orange", "apple"]
-new_fruits = []
+# fruits = ["mango", "pear", "pinepapple", "orange", "apple"]
+# new_fruits = []
 
 # for x in fruits:
 #     if x .endswith("ple"):
@@ -157,3 +157,14 @@ new_fruits = []
 # print([x for x in fruits if x.endswith("ple")])
 # print([x.upper() for x in fruits if x.endswith("ple")])
 # print([x.upper() for x in fruits if not x.endswith("ple")])
+
+# sorting a list of numbers
+# list_num = [6, 7, 8, 9, 10, 11]
+# list_num.sort()
+# list_num.sort(key=lambda x: x * 2, reverse=True)
+# print(list_num)
+
+# sorting a list of strings
+frut = ["Orange", "Red", "Green", "Yellow"]
+frut.sort(key=lambda x: x * 2, reverse=True)
+print(frut)

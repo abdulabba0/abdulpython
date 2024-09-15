@@ -98,6 +98,11 @@ print(my_books2)
 
 a = {
     "b" : [1, 2, 3],
-    "c" : ["Musa", "Isah", "Tanimu"]
-
+    "c" : ["Musa", "Isah", "Tanimu"],
+    student_info : {
+    "name" : "Abdulrahim",
+    "value" : 27,
+    "hobbies" : ["reading", "writing", "painting"]
+    }
+    
 }

@@ -16,7 +16,7 @@ of you want to store multiple items in a variable you have to use any of the seq
 # #a list can contain any tada type
 # student_details = ["Kola", 34, 3.4, True, ["Musa", "saminu"], [1, 2, 3]]
 
-# # lst alloes duplicate items
+# # list allows duplicate items
 # ages = [23, 23, 34, 35]
 
 # #list are ordered 
@@ -89,7 +89,7 @@ students = ["abdul", "frank", "John", "kemi", "musa"]
 # students.insert(0, "grey")
 # print(students)
 
-# # to add at the end of the list
+"to add at the end of the list"
 # students.append("Craig")
 # print(students)
 

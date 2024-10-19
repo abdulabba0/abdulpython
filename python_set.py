@@ -1,7 +1,7 @@
 students_score = {67, 57, 89, 90, 45}
 """
 -A set is not ordered.
--A set is unchangeable but we can add to it, but -cannot remove or replace.
+-A set is unchangeable but we can add to it, but cannot remove or replace.
 -A set does not allow duplicate.
 -A set can hold any data type.
 """
@@ -11,14 +11,14 @@ students_score = {67, 57, 89, 90, 45}
 # print(f"type {type(students_score)}")
 
 # # Another way we can create a set is using a set constructor
-# new_set = set([2, 4, 5, 3,4])
-# new_set2 = set([2, 4, 5, 3,4])
+new_set = set([2, 4, 5, 3,4])
+new_set2 = set([2, 4, 5, 3,4])
 # print(new_set)
 # print(new_set2)
 
 # # changing the item of a set
-# new_set = {34, 54, 65, 23, 54}
-# print(new_set)
+new_set = {34, 54, 65, 23, 54}
+print(new_set)
 
 # # Accessing 
 # for x in new_set :
@@ -60,26 +60,26 @@ print(num_set)
 """
 - Union or update: use to combine all the items of the sets
 - Intersection: keeps duplicates alone
-- Difference: keeps the items of the first set that are noy in the other set
+- Difference: keeps the items of the first set that are not in the other set
 - Symmetric difference 
 """
-union_set = num_set.union(num_set2)
-print(union_set)
+# union_set = num_set.union(num_set2)
+# print(union_set)
 
-inter_set = num_set.intersection(num_set2)
-print(inter_set)
+# inter_set = num_set.intersection(num_set2)
+# print(inter_set)
 
-diff_set = num_set.difference(num_set2)
-print(diff_set)
+# diff_set = num_set.difference(num_set2)
+# print(diff_set)
 
-sym_diff_set = num_set.symmetric_difference(num_set2)
-print(sym_diff_set)
+# sym_diff_set = num_set.symmetric_difference(num_set2)
+# print(sym_diff_set)
 
-union2 = num_set | (num_set2)
-print(union2)
+# union2 = num_set | (num_set2)
+# print(union2)
 
-inter_set2 = num_set & num_set2
-print(inter_set2)
+# inter_set2 = num_set & num_set2
+# print(inter_set2)
 
-diff2 = num_set - (num_set2)
-print(diff2)
+# diff2 = num_set - (num_set2)
+# print(diff2)

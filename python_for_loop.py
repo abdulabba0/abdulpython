@@ -1,8 +1,16 @@
-a = [4, 5, 6, 7, 8, 9, 10]
+"""
+We use for loop to cycle through an iterable, or for iterable over a sequence
 
-# for x in  a :
-    # print(x)
+Sequence :
+- String
+- List 
+- Tuple 
+- Dictionary
+- set
+"""
 
-for x in range(len(a)):
-    print(a[x])
+# String
+String_var = "This is a string"
 
+for char in String_var :
+    print(char)

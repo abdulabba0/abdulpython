@@ -51,10 +51,42 @@ Fibonacci numbers are number in which addition of the last two numbers is the ne
 
 
 # # Q5
-# numbers = [3, 6, 8, 1, 2, 9, 4, 5, 7]
-# big_num = numbers[0]
-# for x in numbers:
-#     if x > big_num:
-#         big_num = x
-# print(x)
+numbers = [3, 6, 8, 1, 2, 9, 4, 5, 7, 1]
+big_num = numbers[1]
+for x in numbers:
+    if x > big_num:
+        big_num = x
+print(x)
 
+"""
+•	Write a Python program that takes a list of numbers and returns a list containing only the even numbers.
+•	Write a Python program that takes two numbers from the user and prints their sum, difference, product, and quotient.
+•	Write a Python program that checks if a given string is a palindrome (reads the same backward as forward).
+•	Write a Python program that prints the first 10 Fibonacci numbers.
+•	Write a Python program that takes a list of numbers and returns the largest number using a loop.
+"""
+
+"Q1"
+# a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# even_num = [x for x in a if x % 2 == 0] 
+# print(even_num)
+
+"Q2"
+# a = 1
+# b = 3
+# print(a + b)
+# print(a - b)
+# print(a * b)
+# print(a % b)
+# print(a / b)
+# print(a // b)
+
+"Q3"
+# string = "bob"
+# if string == string[::-1] :
+#     print("This is a palindrome")
+
+"Q4"
+# a = [3, 5, 2, 7, 9, 3, 6, 7]
+# b = "THIS IS THE WOLRD"
+# print(b.lower())

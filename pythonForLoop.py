@@ -1,12 +1,3 @@
-"""
-General Questions
-•	Write a Python program that takes a list of numbers and returns a list containing only the even numbers.
-•	Write a Python program that takes two numbers from the user and prints their sum, difference, product, and quotient.
-•	Write a Python program that checks if a given string is a palindrome (reads the same backward as forward).
-•	Write a Python program that prints the first 10 Fibonacci numbers.
-•	Write a Python program that takes a list of numbers and returns the largest number using a loop.
-"""
-#Q1
 a = [4, 5, 6, 7, 8, 9, 0, 5, 3, 1, 7, 9]
 even =[x for x in a if x % 2 == 0 and x != 0]
 print(even)
@@ -18,7 +9,6 @@ for x in a :
 
 print(f"even list : {even_list}")
 
-#Q2
 # checking if a string is pallindrome
 strings = "level"
 
@@ -27,7 +17,6 @@ if strings == strings[::-1] :
 else :
     print(f"{strings} is not a pallindrome")
     
-#Q3
 # Fibonnaci numbers
 """ 
 Fibonacci numbers are numbers in which the addition of the last two

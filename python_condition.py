@@ -60,18 +60,18 @@ Send a message to a number, the message can only send to number that statr with 
 
 integer - string
 """
-# number = "08078776605"
+number = "08078776605"
 
-# initial_number = ""
+initial_number = ""
 
-# if int(number) :
-#     initial_number = number
-#     if initial_number[0] == "0" :
-#         initial_number = "+234" + initial_number[1:] 
-#     elif initial_number.startswith("234") : 
-#         initial_number = "+" + initial_number
+if int(number) :
+    initial_number = number
+    if initial_number[0] == "0" :
+        initial_number = "+234" + initial_number[1:] 
+    elif initial_number.startswith("234") : 
+        initial_number = "+" + initial_number
 
-# print(initial_number)
+print(initial_number)
 
 """
 1. check if a variable is a string
@@ -80,22 +80,22 @@ integer - string
 4. if yes, check if it's positive or negative
 """
 
-string_check = "This is good -223"
+# string_check = "This is good -223"
 
-if type(string_check) == str :
-    print("It's a  string")
-    if len(string_check.split(" ")) > 1 :
-        print("It's a sentence")
-        for word in string_check.split(" ") :
-            print(word)
-            if word.isdigit() or word[1:].isdigit() :
-            # if word.isdigit() :
-                print("There's a number in the string")
-                if int(word) >= 0 :
-                    print("yes, it's a positive number")
-                else :
-                    print("no, it's a negative number")
+# if type(string_check) == str :
+#     print("It's a  string")
+#     if len(string_check.split(" ")) > 1 :
+#         print("It's a sentence")
+#         for word in string_check.split(" ") :
+#             print(word)
+#             if word.isdigit() or word[1:].isdigit() :
+#             # if word.isdigit() :
+#                 print("There's a number in the string")
+#                 if int(word) >= 0 :
+#                     print("yes, it's a positive number")
+#                 else :
+#                     print("no, it's a negative number")
 
-#pass
-if 4 > 2 :
-    pass
+# #pass
+# if 4 > 2 :
+#     pass

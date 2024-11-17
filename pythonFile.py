@@ -36,9 +36,10 @@ we use the open methos to work with file
 # print(file.read()) 
 # file.close
 
-file = open("python.jpg", "rb")
-filecontent = file.read(30)
+# file = open("python.jpg", "rb")
+# filecontent = file.read(30)
 
-new_file = open("python.jpg", "wb")
-new_file.write() 
-file.close
+# new_file = open("python.jpg", "wb")
+# new_file.write() 
+# file.close
+

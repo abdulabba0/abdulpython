@@ -61,6 +61,8 @@ class Laptop :
         print("Laptop is turned on")
     def shutDown(self):
         print("Laptop is shut down")
+    def laptop_spec(self):
+        print("Laptop is a core i5")
 
 Laptop = Laptop("12gen", "Gaming", 2024)
-print(Laptop.turnOn())
+print(Laptop.laptop_spec())

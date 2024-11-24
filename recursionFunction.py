@@ -50,13 +50,28 @@ Calculate n fibonacci numbers
 5 : return fibonacci(0) + fibonacci(0)
 6 : return 0 + 0
 """
-def fibonacci(n) :
-    print(n)
-    if n <= 0 :
-        return 0
-    elif n == 1 :
-        return 1
-    else :
-        return fibonacci(n - 1) + fibonacci(n - 2)
+# def fibonacci(n) :
+#     print(n)
+#     if n <= 0 :
+#         return 0
+#     elif n == 1 :
+#         return 1
+#     else :
+#         return fibonacci(n - 1) + fibonacci(n - 2)
     
-print(fibonacci(5))
+# print(fibonacci(5))
+
+"""
+- Calculate standard deviation
+- Write a fuction to calculate mean
+"""
+
+# def mean(num_list) :
+#     return sum(num_list) / len(num_list)
+
+# def standard_deviation(num_list) :
+#     mean_val =  mean(num_list)
+#     variance = sum((x - mean_val) ** 2 for x in num_list) / len(num_list)
+#     return variance ** 0.5
+
+# print(standard_deviation([4, 5, 6, 7, 8, 9, 10, 11]))

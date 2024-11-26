@@ -442,3 +442,4 @@ def safe_divide(num1, num2):
 print(safe_divide(10, 2)) 
 print(safe_divide(10, 0))   
 print(safe_divide(10, "a")) 
+

@@ -143,18 +143,17 @@ Control Flow
 17.	Create a function that checks if a string is a palindrome.
 18.	Write a program that simulates the “FizzBuzz” challenge.
 19.	Implement a program to print a multiplication table up to a given number.
-20.	Create a function that sorts a list of tuples based on the second element in each tuple.
 """
 "Q11"
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+# def factorial(n):
+#     if n == 0 or n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
 
-number = int(input("Enter a number: "))
-result = factorial(number)
-print(f"The factorial of {number} is: {result}")
+# number = int(input("Enter a number: "))
+# result = factorial(number)
+# print(f"The factorial of {number} is: {result}")
 
 "Q12"
 
@@ -165,18 +164,18 @@ print(f"The factorial of {number} is: {result}")
 "Q15"
 
 "Q16"
-def is_leap_year(year):
+# def is_leap_year(year):
    
-    if (year % 4 == 0 and year % 100 != 0) :
-        return True
-    else:
-        return False
+#     if (year % 4 == 0 and year % 100 != 0) :
+#         return True
+#     else:
+#         return False
 
-year = int(input("Enter a year: "))
-if is_leap_year(year):
-    print(f"{year} is a leap year.")
-else:
-    print(f"{year} is not a leap year.")
+# year = int(input("Enter a year: "))
+# if is_leap_year(year):
+#     print(f"{year} is a leap year.")
+# else:
+#     print(f"{year} is not a leap year.")
 
 "Q17. Create a function that checks if a string is a palindrome."
 # string = "level"
@@ -186,3 +185,33 @@ else:
 "Q18. Write a program that simulates the “FizzBuzz” challenge."
 
 "Q19. Implement a program to print a multiplication table up to a given number."
+
+"20. Create a function that sorts a list of tuples based on the second element in each tuple."
+
+"""Loops
+21.	Write a program that reverses a given integer.
+22.	Implement a program to count the number of digits in an integer.
+23.	Write a function that takes a list and prints each element that appears more than once.
+24.	Create a function that finds the missing number in a list of consecutive integers.
+25.	Write a program to generate a random password of a given length.
+26.	Create a program to print the first n terms of the harmonic series.
+27.	Write a function that checks if all elements in a list are unique.
+28.	Implement a function to find the frequency of elements in a list without using a dictionary.
+29.	Create a program to generate a list of unique random integers within a specified range.
+30.	Write a function that finds all the divisors of a given number.
+"""
+"Q21"
+# number = 12345  
+
+# is_negative = number < 0
+
+# reversed_number = int(str(abs(number))[::-1])
+
+# if is_negative:
+#     reversed_number *= -1
+
+# print(f"Reversed integer: {reversed_number}")
+
+"Q22"
+
+number = 123456789

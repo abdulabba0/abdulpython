@@ -7,6 +7,66 @@ o	If a file in source_dir is newer than the one in dest_dir, overwrite it.
 o	If a file exists in dest_dir but not in source_dir, delete it.
 3.	Use the os and shutil modules to handle file operations.
 Bonus: Add error handling to handle cases where directories do not exist or access is denied.
+"""
+import os
+import shutil
+from datetime import datetime
+
+def sync_directories(source_dir, dest_dir):
+    """
+    Synchronize two directories by copying, overwriting, or deleting files.
+
+    Args:
+        source_dir (str): Path to the source directory.
+        dest_dir (str): Path to the destination directory.
+    """
+    try:
+        if not os.path.exists(source_dir):
+            raise FileNotFoundError(f"Source directory '{source_dir}' does not exist.")
+        if not os.path.exists(dest_dir):
+            raise FileNotFoundError(f"Destination directory '{dest_dir}' does not exist.")
+    except FileExistsError as e:
+        print("Cannot locate destination directory '{dest_dir}")
+    else :
+        print("Both directory existed")
+
+    # Listing filies and destination directories
+    try :
+        source_files = {f for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f))}
+        dest_files = {f for f in os.listdir(dest_dir) if os.path.isfile(os.path.join(dest_dir, f))}
+    except :
+        print(f"There was an error {e}")
+    finally :
+        print("Listing files in source and destination directories")
+        print("source files:", source_files)
+        print("destination files:", dest_files) 
+
+# Deleting files in the destination directory
+    try :
+        for file in dest_files :
+            if file not in source_files :
+                os.remove(os.path.join(dest_dir, file))
+            print(f"Deleted: {file}")
+    except Exception as e :
+        print(f"Error deleting files {e}")
+# Move files from the source directory to the destination directory
+    try:
+        for file in dest_files :
+            src_file = os.path.kion(source_dir, file)
+            dest_file = os.path.kion(dest_dir, file)
+            print(src_file)
+
+        if not os.path.exists(dest_file) or os.path.getmtime(src_file) > os.path.getmtime(dest_file):
+            shutil.copy2(src_file, dest_file)
+            print(f"Copied or updtaed: {file}")
+    except Exception as e :
+        print(f"Error copying files {e}")                                                                                    
+
+source = input("Enter the source directory path: ")
+dest = input("Enter the destination directory path: ")
+sync_directories(source, dest)
+
+"""
 ________________________________________
 Question 2: System Resource Monitor
 Create a script monitor_resources.py that:

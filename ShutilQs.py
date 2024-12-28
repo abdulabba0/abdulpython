@@ -1,3 +1,5 @@
+import subprocess
+import platform
 """
 Question 1: Directory Synchronization
 Write a Python function sync_directories that:
@@ -8,66 +10,65 @@ o	If a file exists in dest_dir but not in source_dir, delete it.
 3.	Use the os and shutil modules to handle file operations.
 Bonus: Add error handling to handle cases where directories do not exist or access is denied.
 """
-import os
-import shutil
-from datetime import datetime
+# import os
+# import shutil
+# from datetime import datetime
 
-def sync_directories(source_dir, dest_dir):
-    """
-    Synchronize two directories by copying, overwriting, or deleting files.
+# def sync_directories(source_dir, dest_dir):
+#     """
+#     Synchronize two directories by copying, overwriting, or deleting files.
 
-    Args:
-        source_dir (str): Path to the source directory.
-        dest_dir (str): Path to the destination directory.
-    """
-    try:
-        if not os.path.exists(source_dir):
-            raise FileNotFoundError(f"Source directory '{source_dir}' does not exist.")
-        if not os.path.exists(dest_dir):
-            raise FileNotFoundError(f"Destination directory '{dest_dir}' does not exist.")
-    except FileExistsError as e:
-        print("Cannot locate destination directory '{dest_dir}")
-    else :
-        print("Both directory existed")
+#     Args:
+#         source_dir (str): Path to the source directory.
+#         dest_dir (str): Path to the destination directory.
+#     """
+#     try:
+#         if not os.path.exists(source_dir):
+#             raise FileNotFoundError(f"Source directory '{source_dir}' does not exist.")
+#         if not os.path.exists(dest_dir):
+#             raise FileNotFoundError(f"Destination directory '{dest_dir}' does not exist.")
+#     except FileExistsError as e:
+#         print("Cannot locate destination directory '{dest_dir}")
+#     else :
+#         print("Both directory existed")
 
-    # Listing filies and destination directories
-    try :
-        source_files = {f for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f))}
-        dest_files = {f for f in os.listdir(dest_dir) if os.path.isfile(os.path.join(dest_dir, f))}
-    except :
-        print(f"There was an error {e}")
-    finally :
-        print("Listing files in source and destination directories")
-        print("source files:", source_files)
-        print("destination files:", dest_files) 
+#     # Listing filies and destination directories
+#     try :
+#         source_files = {f for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f))}
+#         dest_files = {f for f in os.listdir(dest_dir) if os.path.isfile(os.path.join(dest_dir, f))}
+#     except :
+#         print(f"There was an error {e}")
+#     finally :
+#         print("Listing files in source and destination directories")
+#         print("source files:", source_files)
+#         print("destination files:", dest_files) 
 
-# Deleting files in the destination directory
-    try :
-        for file in dest_files :
-            if file not in source_files :
-                os.remove(os.path.join(dest_dir, file))
-            print(f"Deleted: {file}")
-    except Exception as e :
-        print(f"Error deleting files {e}")
-# Move files from the source directory to the destination directory
-    try:
-        for file in dest_files :
-            src_file = os.path.kion(source_dir, file)
-            dest_file = os.path.kion(dest_dir, file)
-            print(src_file)
+# # Deleting files in the destination directory
+#     try :
+#         for file in dest_files :
+#             if file not in source_files :
+#                 os.remove(os.path.join(dest_dir, file))
+#             print(f"Deleted: {file}")
+#     except Exception as e :
+#         print(f"Error deleting files {e}")
+# # Move files from the source directory to the destination directory
+#     try:
+#         for file in dest_files :
+#             src_file = os.path.kion(source_dir, file)
+#             dest_file = os.path.kion(dest_dir, file)
+#             print(src_file)
 
-        if not os.path.exists(dest_file) or os.path.getmtime(src_file) > os.path.getmtime(dest_file):
-            shutil.copy2(src_file, dest_file)
-            print(f"Copied or updtaed: {file}")
-    except Exception as e :
-        print(f"Error copying files {e}")                                                                                    
+#         if not os.path.exists(dest_file) or os.path.getmtime(src_file) > os.path.getmtime(dest_file):
+#             shutil.copy2(src_file, dest_file)
+#             print(f"Copied or updtaed: {file}")
+#     except Exception as e :
+#         print(f"Error copying files {e}")                                                                                    
 
-source = input("Enter the source directory path: ")
-dest = input("Enter the destination directory path: ")
-sync_directories(source, dest)
+# source = input("Enter the source directory path: ")
+# dest = input("Enter the destination directory path: ")
+# sync_directories(source, dest)
 
 """
-________________________________________
 Question 2: System Resource Monitor
 Create a script monitor_resources.py that:
 1.	Uses the subprocess module to run system commands like top (Linux/macOS) or tasklist (Windows) to list running processes.
@@ -76,6 +77,45 @@ o	Display the top 5 processes consuming the most memory.
 o	Display the top 5 processes consuming the most CPU.
 3.	Write this information into a log file resource_log.txt.
 Bonus: Schedule the script to run every minute using the os module to manipulate file timestamps as markers.
+"""
+def list_running_processes():
+    """
+    List running processes using system commands:
+    - 'top' for Linux/macOS
+    - 'tasklist' for Windows
+    """
+    try:
+        # Detect the operating system
+        os_name = platform.system()
+
+        if os_name == "Windows":
+            # Use 'tasklist' command for Windows
+            command = ["tasklist"]
+        elif os_name in ("Linux", "Darwin"):  # Darwin is macOS
+            # Use 'top' command for Linux/macOS (batch mode for non-interactive output)
+            command = ["top", "-b", "-n", "1"]
+        else:
+            print(f"Unsupported operating system: {os_name}")
+            return
+
+        # Run the command and capture the output
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+        # Check for errors
+        if result.returncode != 0:
+            print(f"Error running command: {result.stderr}")
+        else:
+            print("Running Processes:")
+            print(result.stdout)
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Run the function
+if __name__ == "__main__":
+    list_running_processes()
+
+"""
 ________________________________________
 Question 3: Create a File Backup System
 Write a Python program backup_system.py that:

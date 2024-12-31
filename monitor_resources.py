@@ -28,12 +28,16 @@ def get_top_process(command, num_top_process):
         with open("resource_log.txt", "w") as log_file:
             log_file.write(f"Top {num_top_process} processes consuming the most memory:\n")
             for i in range(num_top_process):
-                extract = sorted_result[i].split()[:2]
+                extract = sorted_result[i].split()[:-5]
                 size = convert_to_number(sorted_result[i].split()[-2]) / 1024
                 text = " ".join(extract)
-                log_file.write(f"{i+1}. {text} {int(size)}MB \n")
+                log_file.write(f"{i+1} {text} | {int(size)}MB \n")
         print("log file has been created")
     
                 
 get_top_process("TASKLIST", 10)
-            
+
+# result = subprocess.run("TASKLIST", capture_output=True, text=True, shell=True)
+# sorted_result = sorted(result.stdout.splitlines()[3:], key = lambda x: convert_to_number(x.split()[-2]), reverse=True)
+# for line in sorted_result:
+#     print(f"len(line).split())")

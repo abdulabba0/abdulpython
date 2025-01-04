@@ -16,71 +16,82 @@ Object : Car
 
     __init__
 """
-# Single inheritance
-# class vehicle:
-#     def __init__(self, name, type) :     
-#         self.name = name
-#         self.type = type
-#     def information(self):
-#         return f"This is a {self.type} named {self.name}"
-#     def quality(self):
-#         return f"{self.type} name {self.name}"
-# vehicle = vehicle("Tesla", "Car")
 
-# print(vehicle.information())
+"Single inheritance"
+class Vehicle:
+    def __init__(self, name, type) :     
+        self.name = name
+        self.type = type
+    def information(self):
+        return f"This is a {self.type} named {self.name}"
+    def quality(self):
+        return f"{self.type} name {self.name}"
+vehicle = Vehicle("Tesla", "Car")
 
-    
+print(vehicle.information())
 
-# class Car(vehicle) :
-#     def __init__(self, car_year, car_model, car_name, name, type):
-#         super().__init__(name, type)
-#         self.car_name = car_name
-#         self.car_year = car_year
-#         self.car_model = car_model
-       
-#     def Details(self):
-#         pass
-    
-#     def turnLeft(self):
-#         print(f"Car is turning left {self.car_dob}")
-#     def turnRight(self):
-#         print("Car is turning right")
-#     def moveForward(self):
-#         print("Car is moving forward")
-#     def reverse(self):
-#         print("Car is reversing")
+class Car(Vehicle) :
+    def __init__(self, car_year, car_model, car_name, name, type):
+        super().__init__(name, type)
+        self.car_name = car_name
+        self.car_year = car_year
+        self.car_model = car_model
+
+    def Details(self):
+        pass
+
+    def turnLeft(self):
+        print(f"{self.car_name} is turning left")
+    def turnRight(self):
+        print("Car is turning right")
+    def moveForward(self):
+        print("Car is moving forward")
+    def reverse(self):
+        print("Car is reversing")
 # Create an object of the Car class
-# car = Car("Toyota", 2021, "Toyota", "Toyota", "car")
-# print(car.quality())
+car = Car("Toyota", 2021, "Toyota", "Toyota", "car")
+print(car.quality())
 
-# Multiple inheritance
-class Parent1 :
-    def __init__(self, parent1Age, parent1name, parent1Hobby) :
-        self.parent1Age = parent1Age
-        self.parent1name = parent1name
-        self.parent1Hobby = parent1Hobby
-    # p1Name = "Parent 1"
-    def parentHobby(self):
-        return f"{self.parent1name} hobby is Reading {self.parent1Hobby}"
+class Engine(Car):
+    def __init__(self, engine_type, car_year, car_model, car_name, name, type):
+        super().__init__(car_year, car_model, car_name, name, type)
+        self.engine_type = engine_type
+
+    def engine_details(self):
+        return f"{self.engine_type} engine in a {self.car_year} {self.car_model} {self.car_name}, a {self.type} named {self.name}"
+
+engine = Engine("V6", 2021, "Camry", "Toyota", "Toyota", "Car")
+print(engine.engine_details())
+
+
+"Multiple inheritance"
+# class Parent1 :
+#     def __init__(self, parent1Age, parent1name, parent1Hobby) :
+#         self.parent1Age = parent1Age
+#         self.parent1name = parent1name
+#         self.parent1Hobby = parent1Hobby
+
+#     def parentHobby(self):
+#         return f"{self.parent1name} hobby is Reading {self.parent1Hobby}"
     
-class Parent2 :
-    def __init__(self, parent2Age, parent2name, parent2Hobby) :
-        self.parent2Age = parent2Age
-        self.parent2name = parent2name
-        self.parent2Hobby = parent2Hobby
-    # p2Name = "Parent 2"
-    def parent2hobby(self):
-        return f"{self.parent2name} hobby is {self.parent2Hobby}"
+# class Parent2 :
+#     def __init__(self, parent2Age, parent2name, parent2Hobby) :
+#         self.parent2Age = parent2Age
+#         self.parent2name = parent2name
+#         self.parent2Hobby = parent2Hobby
+
+#     def parent2hobby(self):
+#         return f"{self.parent2name} hobby is {self.parent2Hobby}"
     
-class Child(Parent1, Parent2) :
-    def __init__(self, parent1Age, parent1name, parent1Hobby, parent2Age, parent2name, parent2Hobby):
-        Parent1.__init__(self, parent1Age, parent1name, parent1Hobby)
-        Parent2.__init__(self, parent2Age, parent2name, parent2Hobby)
+# class Child(Parent1, Parent2) :
+#     def __init__(self, parent1Age, parent1name, parent1Hobby, parent2Age, parent2name, parent2Hobby):
+#         Parent1.__init__(self, parent1Age, parent1name, parent1Hobby)
+#         Parent2.__init__(self, parent2Age, parent2name, parent2Hobby)
 
-child = Child(88, "Frank", "Reading", 102, "Mary", "Cooking")
+# child = Child(88, "Frank", "Reading", 102, "Mary", "Cooking")
 
-print(child.parentHobby())
-print(child.parent2hobby())
+# print(child.parentHobby())
+# print(child.parent2hobby())
 
 
 

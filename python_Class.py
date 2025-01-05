@@ -52,6 +52,7 @@ class Car(Vehicle) :
 car = Car("Toyota", 2021, "Toyota", "Toyota", "car")
 print(car.quality())
 
+"Multi-Level Inheritance"
 class Engine(Car):
     def __init__(self, engine_type, car_year, car_model, car_name, name, type):
         super().__init__(car_year, car_model, car_name, name, type)
@@ -92,8 +93,6 @@ print(engine.engine_details())
 
 # print(child.parentHobby())
 # print(child.parent2hobby())
-
-
 
 
 # print(car1.turnLeft())

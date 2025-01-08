@@ -12,123 +12,123 @@ Variables, Data Types, and Basic Operations
 10.	Create a program to convert a string containing a floating-point number into an integer without using built-in conversion functions.
 """
 
-# "Q1"
-# a = 5
-# b = 10
+"Q1"
+a = 5
+b = 10
 
-# a = a + b  
-# b = a - b 
-# a = a - b  
+a = a + b  
+b = a - b 
+a = a - b  
 
-# print("After swapping:")
-# print("a =", a)  
-# print("b =", b)  
+print("After swapping:")
+print("a =", a)  
+print("b =", b)  
 
-# "Q2"
+"Q2"
 
-# "Q3"
-# def check_even_odd(number):
-#     if number & 1 == 0:
-#         return "Even"
-#     else:
-#         return "Odd"
+"Q3"
+def check_even_odd(number):
+    if number & 1 == 0:
+        return "Even"
+    else:
+        return "Odd"
 
-# num = 13
-# result = check_even_odd(num)
-# print(f"The number {num} is {result}.") 
-# num = 8
-# result = check_even_odd(num)
-# print(f"The number {num} is {result}.")
+num = 13
+result = check_even_odd(num)
+print(f"The number {num} is {result}.") 
+num = 8
+result = check_even_odd(num)
+print(f"The number {num} is {result}.")
 
-# "Q4"
-# def check_number(number):
-#     if number > 0:
-#         return "The number is positive."
-#     elif number < 0:
-#         return "The number is negative."
-#     else:
-#         return "The number is zero."
+"Q4"
+def check_number(number):
+    if number > 0:
+        return "The number is positive."
+    elif number < 0:
+        return "The number is negative."
+    else:
+        return "The number is zero."
 
-# num = float(input("Enter a number: "))
-# result = check_number(num)
-# print(result)
+num = float(input("Enter a number: "))
+result = check_number(num)
+print(result)
 
-# "Q5"
-# def celsius_to_fahrenheit(celsius):
-#     fahrenheit = (celsius * 9/5) + 32
-#     return fahrenheit
+"Q5"
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
 
-# def fahrenheit_to_celsius(fahrenheit):
-#     celsius = (fahrenheit - 32) * 5/9
-#     return celsius
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
 
-# celsius_temp = 25
-# fahrenheit_temp = 77
+celsius_temp = 25
+fahrenheit_temp = 77
 
-# result_fahrenheit = celsius_to_fahrenheit(celsius_temp)
-# print(f"{celsius_temp}°C is equal to {result_fahrenheit}°F")
+result_fahrenheit = celsius_to_fahrenheit(celsius_temp)
+print(f"{celsius_temp}°C is equal to {result_fahrenheit}°F")
 
-# result_celsius = fahrenheit_to_celsius(fahrenheit_temp)
-# print(f"{fahrenheit_temp}°F is equal to {result_celsius}°C")
+result_celsius = fahrenheit_to_celsius(fahrenheit_temp)
+print(f"{fahrenheit_temp}°F is equal to {result_celsius}°C")
 
-# "Q6"
+"Q6"
 
-# "Q7"
-# def largest_even_number(numbers):
-#     even_numbers = [num for num in numbers if num % 2 == 0]
+"Q7"
+def largest_even_number(numbers):
+    even_numbers = [num for num in numbers if num % 2 == 0]
 
-#     if even_numbers:
-#         return max(even_numbers)
-#     else:
-#         return None
+    if even_numbers:
+        return max(even_numbers)
+    else:
+        return None
 
-# numbers_list = [3, 7, 8, 12, 19, 22]
-# result = largest_even_number(numbers_list)
+numbers_list = [3, 7, 8, 12, 19, 22]
+result = largest_even_number(numbers_list)
 
-# if result is not None:
-#     print(f"The largest even number is: {result}")
-# else:
-#     print("There are no even numbers in the list.")
+if result is not None:
+    print(f"The largest even number is: {result}")
+else:
+    print("There are no even numbers in the list.")
 
-# "Q8"
-# def find_largest_and_smallest(numbers):
+"Q8"
+def find_largest_and_smallest(numbers):
     
-#     largest = numbers[0]
-#     smallest = numbers[0]
+    largest = numbers[0]
+    smallest = numbers[0]
 
-#     for num in numbers:
-#         if num > largest:
-#             largest = num
-#         if num < smallest:
-#             smallest = num
+    for num in numbers:
+        if num > largest:
+            largest = num
+        if num < smallest:
+            smallest = num
 
-#     return smallest, largest
+    return smallest, largest
 
-# numbers_list = [5, 1, 9, -3, 7, 8]
-# smallest, largest = find_largest_and_smallest(numbers_list)
+numbers_list = [5, 1, 9, -3, 7, 8]
+smallest, largest = find_largest_and_smallest(numbers_list)
 
-# print(f"The smallest element is: {smallest}")
-# print(f"The largest element is: {largest}")
+print(f"The smallest element is: {smallest}")
+print(f"The largest element is: {largest}")
 
-# "Q9"
-# def are_anagrams(str1, str2):
+"Q9"
+def are_anagrams(str1, str2):
 
-#     str1 = str1.replace(" ", "").lower()
-#     str2 = str2.replace(" ", "").lower()
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
 
-#     if sorted(str1) == sorted(str2):
-#         return True
-#     else:
-#         return False
+    if sorted(str1) == sorted(str2):
+        return True
+    else:
+        return False
 
-# string1 = "Listen"
-# string2 = "Silent"
-# result = are_anagrams(string1, string2)
+string1 = "Listen"
+string2 = "Silent"
+result = are_anagrams(string1, string2)
 
-# if result:
-#     print(f'"{string1}" and "{string2}" are anagrams.')
-# else:
-#     print(f'"{string1}" and "{string2}" are not anagrams.')
+if result:
+    print(f'"{string1}" and "{string2}" are anagrams.')
+else:
+    print(f'"{string1}" and "{string2}" are not anagrams.')
 
 "Q10"
 
@@ -178,9 +178,9 @@ Control Flow
 #     print(f"{year} is not a leap year.")
 
 "Q17. Create a function that checks if a string is a palindrome."
-# string = "level"
-# if string == string[:-1] :
-#     print(f"{string} is a palindrome")
+string = "level"
+if string == string[:-1] :
+    print(f"{string} is a palindrome")
 
 "Q18. Write a program that simulates the “FizzBuzz” challenge."
 

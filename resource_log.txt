@@ -1,0 +1,11 @@
+Top 10 processes consuming the most memory:
+1 chrome.exe | 584MB 
+2 chrome.exe | 571MB 
+3 Code.exe | 515MB 
+4 chrome.exe | 281MB 
+5 Code.exe | 266MB 
+6 Code.exe | 250MB 
+7 Code.exe | 244MB 
+8 WhatsApp.exe | 239MB 
+9 MsMpEng.exe | 229MB 
+10 Memory Compression | 193MB 

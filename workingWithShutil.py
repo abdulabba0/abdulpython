@@ -55,13 +55,11 @@ from datetime import datetime
 # print(f"Free space : {shutil.disk_usage("/").total / 2**30)
 
 #archving a Folder
-<<<<<<< HEAD
+
 # shutil.make_archive("abdulArchive", "zip", "../abdulpython")
 
 # Unpacking a archived file
 # shutil.unpack_archive("abdulArchive.zip", "abdulPython", "zip")
 
 print(dir(shutil))
-=======
 shutil.make_archive("abdulArchive", "zip", "../abdulpython")
->>>>>>> 35d58a8b66b0be0e047589a1cc36ded792225a64

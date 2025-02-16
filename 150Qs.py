@@ -261,8 +261,21 @@ def largest_and_smallest(tup):
 print(largest_and_smallest((1, 2, 3)))
 
 # 87
-# def index_value_pairs(tup):
-#     return list((tup))
+age = (20, 21, 22, 23)
+res = []
+for index, value in enumerate(age):
+    res.append((index, value))
+# Second way 
+As = [(i, age[i]) for i in range(len(age) - 1)]
+print(As)
+
+i = 0
+third_res = []
+for x in age :
+    third_res.append((i, x))
+    i += 1
+print(third_res)
+print(enumerate(age))
 
 # 88 
 def element_exists(tup, element):

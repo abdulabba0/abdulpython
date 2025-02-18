@@ -230,58 +230,67 @@ Tuples
 90.	Create a function to multiply all elements in a tuple.
 """
 # 81
-# def sort_second_element(tuples_list):
-#     return sorted(tuples_list, key=lambda x: x[1])
-# print(sort_second_element([(1, 3), (3, 2), (4, 1), (2, 1)]))
+def sort_second_element(tuples_list):
+    return sorted(tuples_list, key=lambda x: x[1])
+print(sort_second_element([(1, 3), (3, 2), (2, 1)]))
 
-# # 82
-# def reverse_tuple(tup):
-#     return tup[::-1]
-# print(reverse_tuple((1, 2, 3)))
+# 82
+def reverse_tuple(tup):
+    return tup[::-1]
+print(reverse_tuple((1, 2, 3)))
 
-# #83
-# def find_index(tup, element):
-#     return tup.index(element)
-# print(find_index((1, 2, 3), 2))
+#83
+def find_index(tup, element):
+    return tup.index(element)
+print(find_index((1, 2, 3), 2))
 
 
-# # 84
-# def concatenate_tuples(tup1, tup2):
-#     return tup1 + tup2
-# print(concatenate_tuples((1, 2), (3, 4)))
+# 84
+def concatenate_tuples(tup1, tup2):
+    return tup1 + tup2
+print(concatenate_tuples((1, 2), (3, 4)))
 
-# # 85
-# def count_item(tup, item):
-#     return tup.count(item)
-# print(count_item((1, 2, 2, 3), 2))
+# 85
+def count_item(tup, item):
+    return tup.count(item)
+print(count_item((1, 2, 2, 3), 2))
 
-# # 86
-# def largest_and_smallest(tup):
-#     return max(tup), min(tup)
-# print(largest_and_smallest((1, 2, 3)))
+# 86
+def largest_and_smallest(tup):
+    return max(tup), min(tup)
+print(largest_and_smallest((1, 2, 3)))
 
-# # 87
-# def index_value_pairs(input_tuple):
-#     return [(index, value) for index, value in enumerate(input_tuple)]
+# 87
+age = (20, 21, 22, 23)
+res = []
+for index, value in enumerate(age):
+    res.append((index, value))
+# Second way 
+As = [(i, age[i]) for i in range(len(age) - 1)]
+print(As)
 
-# list_tuple = (10, 20, 30, 40)
-# print(index_value_pairs(list_tuple))
+i = 0
+third_res = []
+for x in age :
+    third_res.append((i, x))
+    i += 1
+print(third_res)
+print(enumerate(age))
 
-# # 88 
-# def element_exists(tup, element):
-#     return element in tup
-# print(element_exists((1, 2, 3), 2))
+# 88 
+def element_exists(tup, element):
+    return element in tup
+print(element_exists((1, 2, 3), 2))
 
-# # 89 Write a function to convert a tuple to a string
-# def tuple_to_string(tup):
-#     return ''.join(map(str, tup))
-# print(tuple_to_string((1, 2, 3)))
+# 89 Write a function to convert a tuple to a string
+def tuple_to_string(tup):
+    return ''.join(map(str, tup))
+print(tuple_to_string((1, 2, 3)))
 
-# # 90 Create a function to multiply all elements in a tuple
-# def multiply_elements(tup):
-#     result = 1
-#     for element in tup:
-#         result *= element
-#     return result
-# print(multiply_elements((1, 2, 3)))
-
+# 90 Create a function to multiply all elements in a tuple
+def multiply_elements(tup):
+    result = 0
+    for element in tup:
+        result *= element
+    return result
+print(multiply_elements((1, 2, 3)))

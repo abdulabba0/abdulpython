@@ -136,74 +136,131 @@ import sys
 #     print(f"ValueError: {e}")
 
 "Delegating exceptions"
-def div(a):
-    return a / 0
+# def div(a):
+#     return a / 0
 
-def dicmod(a):
-    try:
-        res = div(a)
-        return res
-    except ZeroDivisionError as e:
-        return("Cannot divide by zero")
+# def dicmod(a):
+#     try:
+#         res = div(a)
+#         return res
+#     except ZeroDivisionError as e:
+#         return("Cannot divide by zero")
         
-print(dicmod(5))
+# print(dicmod(5))
 
 "Delegating exceptions in a class"
 
-"""
-1.	Write a Python program that raises and catches a ValueError when trying to convert an invalid string to an integer.
-2.	Demonstrate how a ZeroDivisionError can be caught using a try-except block.
-3.	Create a function that uses try-except to handle a KeyError when accessing a non-existent key in a dictionary.
-4.	Write a Python script to catch IndexError when trying to access an out-of-range index in a list.
-5.	Use the KeyboardInterrupt exception to gracefully terminate a program running in an infinite loop.
-________________________________________
-Intermediate Questions
-6.	Explain and demonstrate the difference between catching Exception and BaseException. Why is catching BaseException generally discouraged?
-7.	Create a Python program that catches multiple exceptions (e.g., ValueError and TypeError) in a single try block. Show how to use multiple except branches.
-8.	Write a function that propagates exceptions. For example, if a KeyError occurs inside the function, let it propagate to the calling code.
-9.	Write a program that demonstrates the ordering of except branches. Place the general Exception handler before a specific exception (e.g., KeyError) and explain the result.
-10.	Write a script that raises a SystemExit using sys.exit() but handles it in an except block to perform cleanup tasks before exiting.
-________________________________________
-Advanced Questions
-11.	Create a custom function that generates a TypeError by passing the wrong argument type. Catch the exception and print a user-friendly error message.
-12.	Write a program that demonstrates how to use the else block in a try-except-else structure. Include a situation where no exception occurs.
-13.	Demonstrate the use of the finally block for cleanup actions (e.g., closing a file or database connection) after handling exceptions.
-14.	Simulate a program where an exception propagates through multiple function calls before being caught in the main function. Use a ValueError for this exercise.
-15.	Write a program that handles abstract exceptions like ArithmeticError to catch all arithmetic-related errors (ZeroDivisionError, OverflowError, etc.) in one block.
-________________________________________
-Complex Questions
-16.	Create a custom logging mechanism that catches and logs exceptions (e.g., KeyError, IndexError, etc.) to a file while letting the program continue executing.
-17.	Implement a custom retry mechanism using try-except for a function that raises a ValueError. Retry the function three times before raising the exception again.
-18.	Write a Python script that uses try-except inside a for loop. Simulate a situation where an exception occurs during some iterations but not others.
-19.	Write a program where:
-•	The try block raises multiple exceptions (KeyError, TypeError).
-•	The except block handles them in an ordered way.
-•	Propagates one of the exceptions to an outer try-except.
-20.	Build a small CLI program that:
-•	Uses KeyboardInterrupt to gracefully exit the program.
-•	Handles ValueError when the user enters invalid input.
-•	Uses finally to display a goodbye message regardless of how the program ends.
-________________________________________
-Challenge Question
-21.	Implement a program that demonstrates exception delegation in a nested function structure:
-•	A top-level function calls a helper function.
-•	The helper function raises an ArithmeticError.
-•	The top-level function catches and handles it with a specific message.
-"""
+"Assignment"
+
+# 1.	Write a Python program that raises and catches a ValueError when trying to convert an invalid string to an integer.
+# def invalidstr(a):
+#     try:
+#         return int(a)
+#     except ValueError as e:
+#         return(f"ValueError: {e}")
+
+# print(invalidstr("YR")) 
+
+# 2.	Demonstrate how a ZeroDivisionError can be caught using a try-except block.
+# try:
+#     a = 2 / 0
+# except ZeroDivisionError:
+#     print(f"ZeroDivisionError")
+
+# 3.	Create a function that uses try-except to handle a KeyError when accessing a non-existent key in a dictionary.
+# def non_dict():
+#     try:
+#         d = {"key1": "a", "key2": "b"}
+#         print(d["key3"])       
+#     except KeyError as e:
+#         return(f"KeyError {e}")
+# print(non_dict())
+
+# 4.	Write a Python script to catch IndexError when trying to access an out-of-range index in a list.
+# try:
+#     a = range(4)
+#     print(a[8])
+# except IndexError as e:
+#     print(f"IndexError")
+
+# 5.	Use the KeyboardInterrupt exception to gracefully terminate a program running in an infinite loop.
+# try:
+#     while True:
+#         print("Infinite")
+# except KeyboardInterrupt as e:
+#     print("KeyboardInterrupt: {e}")
+
+# ________________________________________
+# Intermediate Questions
+# 6.	Explain and demonstrate the difference between catching Exception and BaseException. Why is catching BaseException generally discouraged?
+
+# 7.	Create a Python program that catches multiple exceptions (e.g., ValueError and TypeError) in a single try block. Show how to use multiple except branches.
+# def dividenumber(a, b) :
+#     result = None
+#     try : 
+#         result = a / b
+#     except ZeroDivisionError :
+#         print("Error: Division by zero is not allowed")
+#     except TypeError as e:
+#         print(f"TypeError: {e}")
+#     except ValueError as e:
+#         print(f"ValueError: {e}")
+#     return result
+# print(dividenumber("t", 0))
+
+# 8.	Write a function that propagates exceptions. For example, if a KeyError occurs inside the function, let it propagate to the calling code.
+# def prop_exception(a, key):
+#     return a[key]
+
+# try:
+#     my_dict = {"name": "John", "age": 23}
+#     print(prop_exception(my_dict, "c"))
+# except KeyError as e:
+#     print(f"KeyError: {e}")
+
+# 9.	Write a program that demonstrates the ordering of except branches. Place the general Exception handler before a specific exception (e.g., KeyError) and explain the result.
+# 10.	Write a script that raises a SystemExit using sys.exit() but handles it in an except block to perform cleanup tasks before exiting.
+# ________________________________________
+# Advanced Questions
+# 11.	Create a custom function that generates a TypeError by passing the wrong argument type. Catch the exception and print a user-friendly error message.
+# 12.	Write a program that demonstrates how to use the else block in a try-except-else structure. Include a situation where no exception occurs.
+# 13.	Demonstrate the use of the finally block for cleanup actions (e.g., closing a file or database connection) after handling exceptions.
+# 14.	Simulate a program where an exception propagates through multiple function calls before being caught in the main function. Use a ValueError for this exercise.
+# 15.	Write a program that handles abstract exceptions like ArithmeticError to catch all arithmetic-related errors (ZeroDivisionError, OverflowError, etc.) in one block.
+# ________________________________________
+# Complex Questions
+# 16.	Create a custom logging mechanism that catches and logs exceptions (e.g., KeyError, IndexError, etc.) to a file while letting the program continue executing.
+# 17.	Implement a custom retry mechanism using try-except for a function that raises a ValueError. Retry the function three times before raising the exception again.
+# 18.	Write a Python script that uses try-except inside a for loop. Simulate a situation where an exception occurs during some iterations but not others.
+# 19.	Write a program where:
+# •	The try block raises multiple exceptions (KeyError, TypeError).
+# •	The except block handles them in an ordered way.
+# •	Propagates one of the exceptions to an outer try-except.
+# 20.	Build a small CLI program that:
+# •	Uses KeyboardInterrupt to gracefully exit the program.
+# •	Handles ValueError when the user enters invalid input.
+# •	Uses finally to display a goodbye message regardless of how the program ends.
+# ________________________________________
+# Challenge Question
+# 21.	Implement a program that demonstrates exception delegation in a nested function structure:
+# •	A top-level function calls a helper function.
+# •	The helper function raises an ArithmeticError.
+# •	The top-level function catches and handles it with a specific message.
+
 
 'Q20'
-def register():
-    try:
-        while True:
-            try:
-                age  = int(input("Enter your age: "))
-                print(f"Your age is {age}")
-                return
-            except ValueError as e:
-                print(f"ValueError: {e}")
-    except KeyboardInterrupt as e:
-        print("KeyboardInterrupt: Exiting the program") 
-    finally:
-        print("Goodbye!")  
+# def register():
+#     try:
+#         while True:
+#             try:
+#                 age  = int(input("Enter your age: "))
+#                 print(f"Your age is {age}")
+#                 return
+#             except ValueError as e:
+#                 print(f"ValueError: {e}")
+#     except KeyboardInterrupt as e:
+#         print("KeyboardInterrupt: Exiting the program") 
+#     finally:
+#         print("Goodbye!")  
 
-register()
+# register()

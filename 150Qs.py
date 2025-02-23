@@ -157,11 +157,57 @@ Control Flow
 
 "Q12"
 
-"Q13"
+"Q13 	Create a program to simulate a simple calculator using conditional statements."
+# num1 = int(input("Enter a number: "))
+# num2 = int(input("Enter a number: "))
+# x=  input("Enter operation: ")
+# result = 0
 
-"Q14"
+# if x == "+":
+#     result = num1+num2
+# elif x == "-":
+#     result = num1-num2
+# elif x == "*":
+#     result = num1*num2
+# elif x == "/":
+#      result = num1/num2
+    
+# print(result)
+    
+"Q14 Write a function that takes an integer and returns whether the number is prime"
 
-"Q15"
+# def prime():
+#     a = int(input("Number: "))
+#     c = False
+#     for x in range(2,a):
+#         if a%x==0:
+#             c = True
+            
+#     if c:
+#         return "It's not a prime number"
+#     else:
+#         return "It's a prime number"
+# res = prime()
+# print(res)
+
+"Q15 Create a program that finds all prime numbers within a given range"
+def primeNum(x):
+    if x > 1:
+        for i in range(2, x):
+            if i % x == 0:
+                return False
+        else:
+            return True
+    else:
+        return False        
+def allPrimes(x):
+    prime_list = []
+    for i in range(x):
+        if primeNum(i):
+            prime_list.append(i)
+    return prime_list
+
+print(allPrimes(34))
 
 "Q16"
 # def is_leap_year(year):
@@ -202,15 +248,12 @@ Control Flow
 """
 "Q21"
 # number = 12345  
+# neg_int = number < 0
+# rev_number = int(str(abs(number))[::-1])
+# if neg_int:
+#     rev_number *= -1
 
-# is_negative = number < 0
-
-# reversed_number = int(str(abs(number))[::-1])
-
-# if is_negative:
-#     reversed_number *= -1
-
-# print(f"Reversed integer: {reversed_number}")
+# print(f"Reversed integer: {rev_number}")
 
 "Q22"
 
@@ -229,68 +272,68 @@ Tuples
 89.	Write a function to convert a tuple to a string.
 90.	Create a function to multiply all elements in a tuple.
 """
-# 81
-def sort_second_element(tuples_list):
-    return sorted(tuples_list, key=lambda x: x[1])
-print(sort_second_element([(1, 3), (3, 2), (2, 1)]))
+# # 81
+# def sort_second_element(tuples_list):
+#     return sorted(tuples_list, key=lambda x: x[1])
+# print(sort_second_element([(1, 3), (3, 2), (2, 1)]))
 
-# 82
-def reverse_tuple(tup):
-    return tup[::-1]
-print(reverse_tuple((1, 2, 3)))
+# # 82
+# def reverse_tuple(tup):
+#     return tup[::-1]
+# print(reverse_tuple((1, 2, 3)))
 
-#83
-def find_index(tup, element):
-    return tup.index(element)
-print(find_index((1, 2, 3), 2))
+# #83
+# def find_index(tup, element):
+#     return tup.index(element)
+# print(find_index((1, 2, 3), 2))
 
 
-# 84
-def concatenate_tuples(tup1, tup2):
-    return tup1 + tup2
-print(concatenate_tuples((1, 2), (3, 4)))
+# # 84
+# def concatenate_tuples(tup1, tup2):
+#     return tup1 + tup2
+# print(concatenate_tuples((1, 2), (3, 4)))
 
-# 85
-def count_item(tup, item):
-    return tup.count(item)
-print(count_item((1, 2, 2, 3), 2))
+# # 85
+# def count_item(tup, item):
+#     return tup.count(item)
+# print(count_item((1, 2, 2, 3), 2))
 
-# 86
-def largest_and_smallest(tup):
-    return max(tup), min(tup)
-print(largest_and_smallest((1, 2, 3)))
+# # 86
+# def largest_and_smallest(tup):
+#     return max(tup), min(tup)
+# print(largest_and_smallest((1, 2, 3)))
 
-# 87
-age = (20, 21, 22, 23)
-res = []
-for index, value in enumerate(age):
-    res.append((index, value))
-# Second way 
-As = [(i, age[i]) for i in range(len(age) - 1)]
-print(As)
+# # 87
+# age = (20, 21, 22, 23)
+# res = []
+# for index, value in enumerate(age):
+#     res.append((index, value))
+# # Second way 
+# As = [(i, age[i]) for i in range(len(age) - 1)]
+# print(As)
 
-i = 0
-third_res = []
-for x in age :
-    third_res.append((i, x))
-    i += 1
-print(third_res)
-print(enumerate(age))
+# i = 0
+# third_res = []
+# for x in age :
+#     third_res.append((i, x))
+#     i += 1
+# print(third_res)
+# print(enumerate(age))
 
-# 88 
-def element_exists(tup, element):
-    return element in tup
-print(element_exists((1, 2, 3), 2))
+# # 88 
+# def element_exists(tup, element):
+#     return element in tup
+# print(element_exists((1, 2, 3), 2))
 
-# 89 Write a function to convert a tuple to a string
-def tuple_to_string(tup):
-    return ''.join(map(str, tup))
-print(tuple_to_string((1, 2, 3)))
+# # 89 Write a function to convert a tuple to a string
+# def tuple_to_string(tup):
+#     return ''.join(map(str, tup))
+# print(tuple_to_string((1, 2, 3)))
 
-# 90 Create a function to multiply all elements in a tuple
-def multiply_elements(tup):
-    result = 0
-    for element in tup:
-        result *= element
-    return result
-print(multiply_elements((1, 2, 3)))
+# # 90 Create a function to multiply all elements in a tuple
+# def multiply_elements(tup):
+#     result = 0
+#     for element in tup:
+#         result *= element
+#     return result
+# print(multiply_elements((1, 2, 3)))

@@ -153,70 +153,70 @@ import sys
 "Assignment"
 
 # 1.	Write a Python program that raises and catches a ValueError when trying to convert an invalid string to an integer.
-def invalidstr(a):
-    try:
-        return int(a)
-    except ValueError as e:
-        return(f"ValueError: {e}")
+# def invalidstr(a):
+#     try:
+#         return int(a)
+#     except ValueError as e:
+#         return(f"ValueError: {e}")
 
-print(invalidstr("YR")) 
+# print(invalidstr("YR")) 
 
 # 2.	Demonstrate how a ZeroDivisionError can be caught using a try-except block.
-try:
-    a = 2 / 0
-except ZeroDivisionError:
-    print(f"ZeroDivisionError")
+# try:
+#     a = 2 / 0
+# except ZeroDivisionError:
+#     print(f"ZeroDivisionError")
 
 # 3.	Create a function that uses try-except to handle a KeyError when accessing a non-existent key in a dictionary.
-def non_dict():
-    try:
-        d = {"key1": "a", "key2": "b"}
-        print(d["key3"])       
-    except KeyError as e:
-        return(f"KeyError {e}")
-print(non_dict())
+# def non_dict():
+#     try:
+#         d = {"key1": "a", "key2": "b"}
+#         print(d["key3"])       
+#     except KeyError as e:
+#         return(f"KeyError {e}")
+# print(non_dict())
 
 # 4.	Write a Python script to catch IndexError when trying to access an out-of-range index in a list.
-try:
-    a = range(4)
-    print(a[8])
-except IndexError as e:
-    print(f"IndexError")
+# try:
+#     a = range(4)
+#     print(a[8])
+# except IndexError as e:
+#     print(f"IndexError")
 
 # 5.	Use the KeyboardInterrupt exception to gracefully terminate a program running in an infinite loop.
-try:
-    while True:
-        print("Infinite")
-except KeyboardInterrupt as e:
-    print("KeyboardInterrupt: {e}")
+# try:
+#     while True:
+#         print("Infinite")
+# except KeyboardInterrupt as e:
+#     print("KeyboardInterrupt: {e}")
 
 # ________________________________________
 # Intermediate Questions
 # 6.	Explain and demonstrate the difference between catching Exception and BaseException. Why is catching BaseException generally discouraged?
 
 # 7.	Create a Python program that catches multiple exceptions (e.g., ValueError and TypeError) in a single try block. Show how to use multiple except branches.
-def dividenumber(a, b) :
-    result = None
-    try : 
-        result = a / b
-    except ZeroDivisionError :
-        print("Error: Division by zero is not allowed")
-    except TypeError as e:
-        print(f"TypeError: {e}")
-    except ValueError as e:
-        print(f"ValueError: {e}")
-    return result
-print(dividenumber("t", 0))
+# def dividenumber(a, b) :
+#     result = None
+#     try : 
+#         result = a / b
+#     except ZeroDivisionError :
+#         print("Error: Division by zero is not allowed")
+#     except TypeError as e:
+#         print(f"TypeError: {e}")
+#     except ValueError as e:
+#         print(f"ValueError: {e}")
+#     return result
+# print(dividenumber("t", 0))
 
 # 8.	Write a function that propagates exceptions. For example, if a KeyError occurs inside the function, let it propagate to the calling code.
-def prop_exception(a, key):
-    return a[key]
+# def prop_exception(a, key):
+#     return a[key]
 
-try:
-    my_dict = {"name": "John", "age": 23}
-    print(prop_exception(my_dict, "c"))
-except KeyError as e:
-    print(f"KeyError: {e}")
+# try:
+#     my_dict = {"name": "John", "age": 23}
+#     print(prop_exception(my_dict, "c"))
+# except KeyError as e:
+#     print(f"KeyError: {e}")
 
 # 9.	Write a program that demonstrates the ordering of except branches. Place the general Exception handler before a specific exception (e.g., KeyError) and explain the result.
 # 10.	Write a script that raises a SystemExit using sys.exit() but handles it in an except block to perform cleanup tasks before exiting.

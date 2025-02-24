@@ -191,23 +191,23 @@ Control Flow
 # print(res)
 
 "Q15 Create a program that finds all prime numbers within a given range"
-def primeNum(x):
-    if x > 1:
-        for i in range(2, x):
-            if i % x == 0:
-                return False
-        else:
-            return True
-    else:
-        return False        
-def allPrimes(x):
-    prime_list = []
-    for i in range(x):
-        if primeNum(i):
-            prime_list.append(i)
-    return prime_list
+# def primeNum(x):
+#     if x > 1:
+#         for i in range(2, x):
+#             if i % x == 0:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False        
+# def allPrimes(x):
+#     prime_list = []
+#     for i in range(x):
+#         if primeNum(i):
+#             prime_list.append(i)
+#     return prime_list
 
-print(allPrimes(34))
+# print(allPrimes(34))
 
 "Q16"
 # def is_leap_year(year):

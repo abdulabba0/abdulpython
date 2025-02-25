@@ -130,8 +130,10 @@ Variables, Data Types, and Basic Operations
 # else:
 #     print(f'"{string1}" and "{string2}" are not anagrams.')
 
-"Q10"
-
+# 10.	Create a program to convert a string containing a floating-point number into an integer without using built-in conversion functions.
+# a = "12.3"
+# b = float(a)
+# print(b)
 """
 Control Flow
 11.	Implement a function to find the factorial of a number using recursion.
@@ -144,6 +146,8 @@ Control Flow
 18.	Write a program that simulates the “FizzBuzz” challenge.
 19.	Implement a program to print a multiplication table up to a given number.
 """
+
+
 "Q11"
 # def factorial(n):
 #     if n == 0 or n == 1:
@@ -175,6 +179,14 @@ Control Flow
 # print(result)
     
 "Q14 Write a function that takes an integer and returns whether the number is prime"
+# # Write a function that takes an integer and returns whether the number is prime.
+# num = int(input("Enter number: "))
+# count = []
+# if num >1 :
+#     for x in range(2,num):
+#         if num %x==0:
+#             count.append(x)
+# print(count)
 
 # def prime():
 #     a = int(input("Number: "))
@@ -232,7 +244,20 @@ Control Flow
 
 "Q19. Implement a program to print a multiplication table up to a given number."
 
+# x = int(input("Enter number"))
+# i = 1
+# while i <= 10:
+#     res = x * i
+#     print(f"{x} * {i} = {res}")
+#     i += 1
+
+
 "20. Create a function that sorts a list of tuples based on the second element in each tuple."
+# a = [("we", "32"), ("4", "54"), ("65", "1")]
+# # print(a)
+# b = sorted(a, key=lambda x: x[1])
+# print(b)
+
 
 """Loops
 21.	Write a program that reverses a given integer.
@@ -246,18 +271,38 @@ Control Flow
 29.	Create a program to generate a list of unique random integers within a specified range.
 30.	Write a function that finds all the divisors of a given number.
 """
-"Q21"
-# number = 12345  
+"Q21 Write a program that reverses a given integer"
+# number = int(input("Enter Number: "))  
 # neg_int = number < 0
-# rev_number = int(str(abs(number))[::-1])
+# rev_number = int(str(number)[::-1])
 # if neg_int:
 #     rev_number *= -1
 
 # print(f"Reversed integer: {rev_number}")
 
-"Q22"
+"Q22 Implement a program to count the number of digits in an integer."
 
-# number = 123456789
+# num = int(input("Enter number: "))
+# count = []
+# for i in range(num):
+#     count.append(i)
+
+# print(len(count))
+
+"Q23 Write a function that takes a list and prints each element that appears more than once"
+# lst = [2, 3, 4, 5, 6, 2, 3, 4]
+# count_dict = {}
+
+# for item in lst:
+#     if item in count_dict:
+#         count_dict[item] += 1
+#     else:
+#         count_dict[item] = 1
+
+# for item, count in count_dict.items():
+#     if count > 1:
+#         print(f"{item} appears {count} times")
+
 
 """
 Tuples

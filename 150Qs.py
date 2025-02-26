@@ -1,3 +1,6 @@
+import random
+import string
+
 """
 Variables, Data Types, and Basic Operations
 1.	Write a program to swap two variables without using a third variable.
@@ -303,7 +306,61 @@ Control Flow
 #     if count > 1:
 #         print(f"{item} appears {count} times")
 
+"24.	Create a function that finds the missing number in a list of consecutive integers."
+# lst = [1, 2, 3, 5, 6, 7]
+# missing = []
+# for i in range(len(lst) - 1):
+#     if lst[i] + 1 != lst[i + 1]:
+#         missing.append(lst[i] + 1)
 
+# if missing:
+#     print(f"{missing} is the missing number(s)")
+# else:
+#     print("No missing numbers")
+
+"25.	Write a program to generate a random password of a given length."
+
+
+# def generate_password(length):
+# 	characters = string.ascii_letters 
+# 	password = ''.join(random.choices(characters, k=length))
+# 	return password
+
+# password_length = int(input("Enter password length: "))
+# password = generate_password(password_length)
+# print(f"Generated password: {password}")
+
+"27.	Write a function that checks if all elements in a list are unique."
+# def unique_elements(lst):
+#     characters = string.ascii_letters 
+#     rand_lst = ''.join(random.choices(characters, k=lst))
+#     return rand_lst
+
+# list_length = int(input("Enter list length: "))
+# rand_lst = unique_elements(list_length)
+# print(f"Generated list: {rand_lst}")
+
+# def unique_elements_sorted(lst):
+#     return list(set([x for x in lst if lst.count(x) > 1]))
+
+# print(unique_elements_sorted(rand_lst))
+
+"28.    Implement a function to find the frequency of elements in a list without using a dictionary."
+# def elements_frequency():
+#     lst = [1,2,3,4,5,2,1,4]
+#     frequency = {}  
+#     for i in lst:
+#         if item in frequency:
+#             frequency[i] += 1
+#         else:
+#             frequency[i] = 1
+#     return frequency
+
+# res = elements_frequency()
+# print(res)
+
+"30.	Write a function that finds all the divisors of a given number."
+    
 """
 Tuples
 81.	Write a function that sorts a list of tuples by the second element.

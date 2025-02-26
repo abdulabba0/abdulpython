@@ -360,7 +360,8 @@ Control Flow
 # print(res)
 
 "30.	Write a function that finds all the divisors of a given number."
-    
+
+
 """
 Tuples
 81.	Write a function that sorts a list of tuples by the second element.

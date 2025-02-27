@@ -319,10 +319,8 @@ Control Flow
 #     print("No missing numbers")
 
 "25.	Write a program to generate a random password of a given length."
-
-
 # def generate_password(length):
-# 	characters = string.ascii_letters 
+# 	characters = string.ascii_letters
 # 	password = ''.join(random.choices(characters, k=length))
 # 	return password
 
@@ -359,8 +357,26 @@ Control Flow
 # res = elements_frequency()
 # print(res)
 
-"30.	Write a function that finds all the divisors of a given number."
+"29.	Create a program to generate a list of unique random integers within a specified range."
+# def unique_random_num():
+#     num = random.sample(range(1, 100), 10)
+#     return num
 
+# print(unique_random_num())
+
+"30.	Write a function that finds all the divisors of a given number."
+# def find_divisors(x):
+#     if x <= 0:
+#         return "Enter a greater number"
+    
+#     divisors = []
+#     for i in range(1, x +1):
+#         if x % i == 0:
+#             divisors.append(i)
+#     return divisors
+
+# num = int(input("Enter number: "))
+# print("Divisors: ", find_divisors(num))
 
 """
 Tuples

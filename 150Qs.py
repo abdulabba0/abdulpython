@@ -1,3 +1,6 @@
+import random
+import string
+
 """
 Variables, Data Types, and Basic Operations
 1.	Write a program to swap two variables without using a third variable.
@@ -130,8 +133,10 @@ Variables, Data Types, and Basic Operations
 # else:
 #     print(f'"{string1}" and "{string2}" are not anagrams.')
 
-"Q10"
-
+# 10.	Create a program to convert a string containing a floating-point number into an integer without using built-in conversion functions.
+# a = "12.3"
+# b = float(a)
+# print(b)
 """
 Control Flow
 11.	Implement a function to find the factorial of a number using recursion.
@@ -144,6 +149,8 @@ Control Flow
 18.	Write a program that simulates the “FizzBuzz” challenge.
 19.	Implement a program to print a multiplication table up to a given number.
 """
+
+
 "Q11"
 # def factorial(n):
 #     if n == 0 or n == 1:
@@ -175,6 +182,14 @@ Control Flow
 # print(result)
     
 "Q14 Write a function that takes an integer and returns whether the number is prime"
+# # Write a function that takes an integer and returns whether the number is prime.
+# num = int(input("Enter number: "))
+# count = []
+# if num >1 :
+#     for x in range(2,num):
+#         if num %x==0:
+#             count.append(x)
+# print(count)
 
 # def prime():
 #     a = int(input("Number: "))
@@ -191,23 +206,23 @@ Control Flow
 # print(res)
 
 "Q15 Create a program that finds all prime numbers within a given range"
-def primeNum(x):
-    if x > 1:
-        for i in range(2, x):
-            if i % x == 0:
-                return False
-        else:
-            return True
-    else:
-        return False        
-def allPrimes(x):
-    prime_list = []
-    for i in range(x):
-        if primeNum(i):
-            prime_list.append(i)
-    return prime_list
+# def primeNum(x):
+#     if x > 1:
+#         for i in range(2, x):
+#             if i % x == 0:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False        
+# def allPrimes(x):
+#     prime_list = []
+#     for i in range(x):
+#         if primeNum(i):
+#             prime_list.append(i)
+#     return prime_list
 
-print(allPrimes(34))
+# print(allPrimes(34))
 
 "Q16"
 # def is_leap_year(year):
@@ -232,7 +247,20 @@ print(allPrimes(34))
 
 "Q19. Implement a program to print a multiplication table up to a given number."
 
+# x = int(input("Enter number"))
+# i = 1
+# while i <= 10:
+#     res = x * i
+#     print(f"{x} * {i} = {res}")
+#     i += 1
+
+
 "20. Create a function that sorts a list of tuples based on the second element in each tuple."
+# a = [("we", "32"), ("4", "54"), ("65", "1")]
+# # print(a)
+# b = sorted(a, key=lambda x: x[1])
+# print(b)
+
 
 """Loops
 21.	Write a program that reverses a given integer.
@@ -246,18 +274,109 @@ print(allPrimes(34))
 29.	Create a program to generate a list of unique random integers within a specified range.
 30.	Write a function that finds all the divisors of a given number.
 """
-"Q21"
-# number = 12345  
+"Q21 Write a program that reverses a given integer"
+# number = int(input("Enter Number: "))  
 # neg_int = number < 0
-# rev_number = int(str(abs(number))[::-1])
+# rev_number = int(str(number)[::-1])
 # if neg_int:
 #     rev_number *= -1
 
 # print(f"Reversed integer: {rev_number}")
 
-"Q22"
+"Q22 Implement a program to count the number of digits in an integer."
 
-# number = 123456789
+# num = int(input("Enter number: "))
+# count = []
+# for i in range(num):
+#     count.append(i)
+
+# print(len(count))
+
+"Q23 Write a function that takes a list and prints each element that appears more than once"
+# lst = [2, 3, 4, 5, 6, 2, 3, 4]
+# count_dict = {}
+
+# for item in lst:
+#     if item in count_dict:
+#         count_dict[item] += 1
+#     else:
+#         count_dict[item] = 1
+
+# for item, count in count_dict.items():
+#     if count > 1:
+#         print(f"{item} appears {count} times")
+
+"24.	Create a function that finds the missing number in a list of consecutive integers."
+# lst = [1, 2, 3, 5, 6, 7]
+# missing = []
+# for i in range(len(lst) - 1):
+#     if lst[i] + 1 != lst[i + 1]:
+#         missing.append(lst[i] + 1)
+
+# if missing:
+#     print(f"{missing} is the missing number(s)")
+# else:
+#     print("No missing numbers")
+
+"25.	Write a program to generate a random password of a given length."
+# def generate_password(length):
+# 	characters = string.ascii_letters
+# 	password = ''.join(random.choices(characters, k=length))
+# 	return password
+
+# password_length = int(input("Enter password length: "))
+# password = generate_password(password_length)
+# print(f"Generated password: {password}")
+
+"27.	Write a function that checks if all elements in a list are unique."
+# def unique_elements(lst):
+#     characters = string.ascii_letters 
+#     rand_lst = ''.join(random.choices(characters, k=lst))
+#     return rand_lst
+
+# list_length = int(input("Enter list length: "))
+# rand_lst = unique_elements(list_length)
+# print(f"Generated list: {rand_lst}")
+
+# def unique_elements_sorted(lst):
+#     return list(set([x for x in lst if lst.count(x) > 1]))
+
+# print(unique_elements_sorted(rand_lst))
+
+"28.    Implement a function to find the frequency of elements in a list without using a dictionary."
+# def elements_frequency():
+#     lst = [1,2,3,4,5,2,1,4]
+#     frequency = {}  
+#     for i in lst:
+#         if item in frequency:
+#             frequency[i] += 1
+#         else:
+#             frequency[i] = 1
+#     return frequency
+
+# res = elements_frequency()
+# print(res)
+
+"29.	Create a program to generate a list of unique random integers within a specified range."
+# def unique_random_num():
+#     num = random.sample(range(1, 100), 10)
+#     return num
+
+# print(unique_random_num())
+
+"30.	Write a function that finds all the divisors of a given number."
+# def find_divisors(x):
+#     if x <= 0:
+#         return "Enter a greater number"
+    
+#     divisors = []
+#     for i in range(1, x +1):
+#         if x % i == 0:
+#             divisors.append(i)
+#     return divisors
+
+# num = int(input("Enter number: "))
+# print("Divisors: ", find_divisors(num))
 
 """
 Tuples
@@ -337,3 +456,4 @@ Tuples
 #         result *= element
 #     return result
 # print(multiply_elements((1, 2, 3)))
+

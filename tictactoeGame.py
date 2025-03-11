@@ -1,3 +1,6 @@
+import random
+
+
 """
 Step by step procedure
 1. Understand the problem
@@ -50,14 +53,46 @@ def check_winner():
         return "Tie"
     return False
 
-# Player 1
+# def play_game():
+#     current_player = "X"
+#     while True:
+#         print_board()
+#         move = input(f"Player {current_player} choose position from 1-9: ")
+#         if board[int(move) - 1] != " " :
+#             print("Invalid move, choose an empty square")
+#             continue
+
+#         board[int(move) - 1] = current_player
+#         result = check_winner()
+#         if result :
+#             print_board()
+#             if result == "Tie" :
+#                 print("It's a Tie!")
+#             else:
+#                 print(f"Player {result} has won the game")
+#             break
+#         if current_player == "X" :
+#             current_player = "0"
+#         else :
+#             current_player == "X"
+
+# play_game()
+
+"create for player com"
+
 def play_game():
     current_player = "X"
     while True:
         print_board()
-        move = input(f"Player {current_player} choose position from 1-9: ")
+        if current_player == "X":
+            move = input(f"Player {current_player} choose position from 1-9: ")
+        else:
+            move = str(random.choice([i for i in range(1, 10) if board[i - 1] == " "]))
+            print(f"Invalid move, choose an empty square")
+
         if board[int(move) - 1] != " " :
-            print("Invalid move, choose an empty square")
+            if current_player == "X" :
+                print("Invalid move, choose an empty square")
             continue
 
         board[int(move) - 1] = current_player
@@ -72,8 +107,6 @@ def play_game():
         if current_player == "X" :
             current_player = "0"
         else :
-            current_player == "X"
-
+            current_player = "X"
+        
 play_game()
-
-"create for player com"

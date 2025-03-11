@@ -53,6 +53,8 @@ def check_winner():
         return "Tie"
     return False
 
+# Two Players
+
 # def play_game():
 #     current_player = "X"
 #     while True:
@@ -78,7 +80,7 @@ def check_winner():
 
 # play_game()
 
-"create for player com"
+# create computer as a player
 
 def play_game():
     current_player = "X"

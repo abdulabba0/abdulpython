@@ -599,3 +599,18 @@ Strings
 49.	Write a function to convert a given string to title case without using str.title().
 50.	Implement a program to find the frequency of each word in a sentence.
 """
+# Q41
+def letters(x):
+    occurrences = {}  
+    for char in x:
+        if char in occurrences:
+            occurrences[char] += 1  
+        else:
+            occurrences[char] = 1
+    return occurrences  
+
+x = "This is an example"
+result = char_occurrences(x)
+
+for char, count in result.items():
+    print(f"'{char}': {count}")

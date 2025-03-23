@@ -244,6 +244,16 @@ Control Flow
 #     print(f"{string} is a palindrome")
 
 "Q18. Write a program that simulates the “FizzBuzz” challenge."
+for i in range(100):
+    if i % 3 == 0:
+        print("Fizz")
+    if i % 5 == 0:
+        print("Buzz")
+    if i % 3 == 0 and i % 5 == 0 :
+        print("FizzBuzz")
+    else:
+        print(f"{i}")
+
 
 "Q19. Implement a program to print a multiplication table up to a given number."
 
@@ -457,3 +467,160 @@ Tuples
 #     return result
 # print(multiply_elements((1, 2, 3)))
 
+"""
+Functions
+31.	Implement a function that returns the length of the longest word in a list.
+32.	Write a function that calculates the Greatest Common Divisor (GCD) of two numbers.
+33.	Create a function to merge two sorted lists into one sorted list without using built-in sorting functions.
+34.	Write a function that counts the number of words in a given sentence.
+35.	Implement a function that finds the number of occurrences of each character in a string.
+36.	Write a function that takes a list of numbers and returns a new list containing the squares of all the odd numbers.
+37.	Create a function to convert a list of numbers to a string, where each number is separated by a comma.
+38.	Write a function to calculate the area of a rectangle, square, or circle based on user input.
+39.	Implement a function that returns the first non-repeated character in a string.
+40.	Write a function that returns the index of the second occurrence of a target element in a list.
+"""
+# Q31
+# def longest_word():
+#     lst = ["hit", "word", "your", "Longest"]
+#     longest = ""
+#     for word in lst:
+#         if len(word) > len(longest):
+#             longest = word
+#     return longest
+
+# print(longest_word())
+
+# Q32
+# def gcd(a, b):
+#     if b == 0:
+#         return a 
+#     return gcd(b, a % b)
+
+# num1 = int(input("Enter number: "))
+# num2 = int(input("Enter number: "))
+# print("GCD of", num1, "and", num2, "is:", gcd(num1, num2))
+
+# Q33
+# def sorted_list():
+#     lst1= [0, 8, 2]
+#     lst2= [2, 5, 9]
+#     return sorted(lst1 + lst2)
+    
+# print(sorted_list())
+
+# Q34
+# def word_count():
+#     sentence = "This is an example"
+#     words = sentence.split()
+#     return len(words)
+
+# print(word_count())
+
+# Q35
+# def char_occurrences(x):
+#     occurrences = {}  
+#     for char in x:
+#         if char in occurrences:
+#             occurrences[char] += 1  
+#         else:
+#             occurrences[char] = 1
+#     return occurrences  
+
+# x = "This is an example"
+# result = char_occurrences(x)
+
+# for char, count in result.items():
+#     print(f"'{char}': {count}")
+
+# Q36
+# def odd_list(x):
+#     squares_for_odds = []
+#     for int in x:
+#         squares_for_odds.append(int ** 2)
+#     return squares_for_odds
+
+# x = [2, 3, 4, 5]
+# result = print(odd_list(x))
+
+# Q37
+# def nums_to_string(numbers):
+#     return ", ".join(map(str, numbers))  
+
+# numbers = [1, 2, 3, 4, 5]
+# result = nums_to_string(numbers)
+# print(result)
+
+# Q38
+import math
+
+# def calculate_area():
+#     shape = input("Enter the shape (rectangle, square, or circle): ")
+    
+#     if shape == "rectangle":
+#         length = float(input("Enter the length: "))
+#         width = float(input("Enter the width: "))
+#         area = length * width
+#         print(f"Area of the rectangle: {area}")
+
+#     elif shape == "square":
+#         side = float(input("Enter the side length: "))
+#         area = side ** 2
+#         print(f"Area of the square: {area}")
+
+#     elif shape == "circle":
+#         radius = float(input("Enter the radius: "))
+#         area = math.pi * radius ** 2
+#         print(f"Area of the circle: {area}")
+
+#     else:
+#         print("Invalid shape. Please enter rectangle, square, or circle.")
+
+# print(calculate_area())
+
+# Q39
+# def first_unique_word(word):
+     
+#     for char in word:
+#         if word.count(char) == 1:
+#             return char  
+
+# word = "This is an example"
+# result = first_unique_word(word)
+# print(result)
+
+# Q40 
+"Write a function that returns the index of the second occurrence of a target element in a list"
+# def second_occurence(i):
+#     seen = {}
+#     for char in i:
+#         if i.count(char) == 2:
+            
+"""
+Strings
+41.	Write a function that counts the number of capital and lowercase letters in a string.
+42.	Create a function to reverse a string without using slicing.
+43.	Write a program to find the longest substring in a string without repeating characters.
+44.	Implement a function to count the number of spaces in a sentence.
+45.	Write a function to replace all vowels in a string with a specific character.
+46.	Create a program to find the longest palindromic substring in a given string.
+47.	Write a function to check if two strings are rotations of each other.
+48.	Create a function that counts the number of words that start with a specific letter in a sentence.
+49.	Write a function to convert a given string to title case without using str.title().
+50.	Implement a program to find the frequency of each word in a sentence.
+"""
+# Q41
+# def letters(x):
+#     occurrences = {}  
+#     for char in x:
+#         if char in occurrences:
+#             occurrences[char] += 1  
+#         else:
+#             occurrences[char] = 1
+#     return occurrences  
+
+# x = "This is an example"
+# result = char_occurrences(x)
+
+# for char, count in result.items():
+    # print(f"'{char}': {count}")

@@ -1,39 +1,39 @@
 import statistics as st
 
-# Mean
-student_score = [30, 50, 40, 25, 45, 35]
-mean = st.mean(student_score)
-print(mean) 
+# # Mean
+# student_score = [30, 50, 40, 25, 45, 35]
+# mean = st.mean(student_score)
+# print(mean) 
 
-# harmornic mean
-print('=============================' *2)
-print('Harmonic Mean')
-h_mean = st.harmonic_mean(student_score)
-print(h_mean)
+# # harmornic mean
+# print('=============================' *2)
+# print('Harmonic Mean')
+# h_mean = st.harmonic_mean(student_score)
+# print(h_mean)
 
-# median
-print('=============================' *2)
-print('Median')
-medi = st.median(student_score)
-print(medi)
+# # median
+# print('=============================' *2)
+# print('Median')
+# medi = st.median(student_score)
+# print(medi)
 
-# mode
-print('=============================' *2)
-print('Mode')
-mod = st.mode(student_score)
-print(mod)
+# # mode
+# print('=============================' *2)
+# print('Mode')
+# mod = st.mode(student_score)
+# print(mod)
 
-# standard deviation
-print('=============================' *2)
-print('Standard Deviation')
-std = st.stdev(student_score)
-print(std)
+# # standard deviation
+# print('=============================' *2)
+# print('Standard Deviation')
+# std = st.stdev(student_score)
+# print(std)
 
-# variance
-print('=============================' *2)
-print('Variance')
-var = st.variance(student_score)
-print(var)
+# # variance
+# print('=============================' *2)
+# print('Variance')
+# var = st.variance(student_score)
+# print(var)
 
 """Suppose you travel to a place at  60km/h and return at 40km/h.
 calculate the average speed
@@ -112,36 +112,60 @@ Daily sales (in $): [200, 220, 210, 205, 230, 240, 1000].
 Find the variance and standard deviation.
 Explain whether the data is consistent or has high variability."""
 
-print('=============================' *2)
-print("""
-    Suppose you travel to a place at  60km/h and return at 40km/h.
-    calculate the average speed
-""")
-speed = [60, 40]
-average_speed = st.harmonic_mean(speed)
-print(f'Average Speed: {average_speed}')
+# print('=============================' *2)
+# print("""
+#     Suppose you travel to a place at  60km/h and return at 40km/h.
+#     calculate the average speed
+# """)
+# speed = [60, 40]
+# average_speed = st.harmonic_mean(speed)
+# print(f'Average Speed: {average_speed}')
 
-print('=============================' *2)
-print("""You recorded the daily temperature (in °C) for a week: [30, 32, 31, 29, 35, 33, 30].
-Find the average temperature using statistics.mean().
-      """)
+# print('=============================' *2)
+# print("""You recorded the daily temperature (in °C) for a week: [30, 32, 31, 29, 35, 33, 30].
+# Find the average temperature using statistics.mean().
+#       """)
 
-daily_temperature = [30, 32, 31, 29, 35, 33, 30]
-avg_daiy_temp = st.mean(daily_temperature)
-print(avg_daiy_temp)
+# daily_temperature = [30, 32, 31, 29, 35, 33, 30]
+# avg_daiy_temp = st.mean(daily_temperature)
+# print(avg_daiy_temp)
 
-print('=============================' *2)
-print("""Favorite programming languages of developers: ["Python", "JavaScript", "Python", "C++", "JavaScript", "Python"].
-Find the most common languages using statistics.multimode().
-""")
-fav_prog_lang = ["Python", "JavaScript", "Python", "C++", "JavaScript", "Python"]
-common_lang = st.multimode(fav_prog_lang)
-print(common_lang)
+# print('=============================' *2)
+# print("""Favorite programming languages of developers: ["Python", "JavaScript", "Python", "C++", "JavaScript", "Python"].
+# Find the most common languages using statistics.multimode().
+# """)
+# fav_prog_lang = ["Python", "JavaScript", "Python", "C++", "JavaScript", "Python"]
+# common_lang = st.multimode(fav_prog_lang)
+# print(common_lang)
 
-print('=============================' *2)
-print("""Exam scores: [30, 40, 50, 60, 70, 80, 90, 100].
-Find the quartiles (25%, 50%, 75%) using statistics.quantiles().
-""")
-exam_scores = [30, 40, 50, 60, 70, 80, 90, 100]
-quantile_25th = st.quantiles(exam_scores, n=25)
-print(quantile_25th)
+# print('=============================' *2)
+# print("""Exam scores: [30, 40, 50, 60, 70, 80, 90, 100].
+# Find the quartiles (25%, 50%, 75%) using statistics.quantiles().
+# """)
+# exam_scores = [30, 40, 50, 60, 70, 80, 90, 100]
+# quantile_25th = st.quantiles(exam_scores, n=25)
+# print(quantile_25th)
+
+# """
+# Slope and Intercept of a line
+
+# y = mx + b
+# where m is the slope and b is the y-intercept.
+# y = slope.x + intercept (bias)
+
+# Suppose you collected data about students:
+# Study hours (x): [2, 3, 5, 7, 9]
+# Exam scores (y): [50, 65, 80, 88, 95]
+
+# slope, intercept = st.linear_regression(stud)
+# """
+# study_hours= [2, 3, 5, 7, 9]
+# exam_scores= [50, 65, 80, 88, 95]
+
+# slope, intercept = st.linear_regression(study_hours, exam_scores)
+# print(slope, intercept)
+
+# studenta_st_hour = 4
+# studenta_score = (slope *studenta_st_hour) + intercept
+# print(f'Student A score if he studies for {studenta_st_hour} hours')
+

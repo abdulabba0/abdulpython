@@ -114,55 +114,35 @@ Write a function that replaces missing emails with "unknown@example.com"
 and saves the cleaned data back into CSV."""
 
 #Load the CSV and print all students/employers whose age is greater than 30.
-with open("employee.csv", 'r') as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        if int(row["Age"]) > 30:
-            print(row)
+# with open("employee.csv", 'r') as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         if int(row["Age"]) > 30:
+#             print(row)
 
 # Sort the CSV data by Age in ascending order and save the result into a new CSV file.
 
-# def sort_csv(file, new_file_name) :
-#     updated_file = []
-#     with open(file, 'r') as file:
-#         reader = csv.DictReader(file)
-#         for row in reader:
+# input_file = 'employee.csv'
+# output_file = 'sorted_output.csv'
 
-# def sort_csv(file) :
-#     left = []
-#     right = []
-#     all_ages = []
+# with open(input_file, 'r', newline='') as file:
+#     reader = csv.DictReader(file)
+#     sorted_rows = sorted(reader, key=lambda row: int(row['Age']))
 
-#     readers = []
-#     with open(file, 'r+') as file:
-#         reader = csv.DictReader(file)
-#         for rows in reader:
-#             readers.append(rows)
+# with open(output_file, mode='w', newline='') as file:
+#     fieldnames = reader.fieldnames
+#     writer = csv.DictWriter(file, fieldnames=fieldnames)
+#     writer.writeheader()
+#     writer.writerows(sorted_rows)
 
-#     all_ages = [x['Age'] for x in readers]
-#     sorted_age = [x['Age'] for x in readers]
-#     all_ages.sort()
-#     mid = sorted_age[int(len(sorted_age) / 2)]
-#     print(mid)
-#     for age in enumerate(all_ages):
-#         if age > mid:
-#             right.append((index, age))
+# print({output_file})
 
-# file = "employee.csv"
-# sort_csv(file)
+# Find all the unique classes (for students) or unique departments (for employers).
 
-input_file = 'employee.csv'
-output_file = 'sorted_output.csv'
+file_e = 'employee.csv'
 
-with open(input_file, 'r', newline='') as file:
+with open(file_e, 'r') as file:
     reader = csv.DictReader(file)
-    sorted_rows = sorted(reader, key=lambda row: int(row['Age']))
+    unique_dept_lst = {row['Departments'] for row in reader}
 
-with open(output_file, mode='w', newline='') as file:
-    fieldnames = reader.fieldnames
-    writer = csv.DictWriter(file, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(sorted_rows)
-
-print({output_file})
-
+print(unique_dept_lst)
